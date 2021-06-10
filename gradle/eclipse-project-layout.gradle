@@ -1,0 +1,15 @@
+eclipse {
+	classpath {
+		file {
+			whenMerged {
+				entries.each {
+					source ->
+					if (source.kind == 'src' && source.path.endsWith('-gen')) {
+						source.entryAttributes['ignore_optional_problems'] = 'true'
+					}
+					
+				}
+			}
+		}
+	}
+}

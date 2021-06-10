@@ -1,0 +1,23 @@
+.classpath
+.project
+.settings/
+*.log
+log/
+target/
+bin/
+.DS_Store
+test-output/
+.metadata/
+screenshots/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+# Added by https://ghe.iparadigms.com/AppOps/bootstrap-jet
+dockercfg
+jet-env
+.gradle/
+build/
