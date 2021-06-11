@@ -55,7 +55,7 @@ public class Component {
     return this.driver;
   }
 
-  protected Pair<String, LocatorType> fetchElementPair(Map<String, Pair<String, LocatorType>> map, String key) {
+  public Pair<String, LocatorType> fetchElementPair(Map<String, Pair<String, LocatorType>> map, String key) {
     return map.get(key);
   }
   
