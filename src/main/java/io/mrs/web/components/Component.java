@@ -136,7 +136,7 @@ public class Component {
     return ((JavascriptExecutor) this.driver).executeScript(javascript);
   } 
   
-  protected By fetchBy(Pair<String, LocatorType> elementPair) {
+  public By fetchBy(Pair<String, LocatorType> elementPair) {
     String selector = elementPair.getLeft();
     switch (elementPair.getRight()) {
       case CLASS_NAME:
