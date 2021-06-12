@@ -28,9 +28,8 @@ repositories {
 ext {
   logging_log4j_version='2.12.1'
   selenium_version='3.141.59'
-  junit_version='5.7.0'
-  junit_platform_runner_version='1.7.0'
-  assertj_core_version='3.16.1'
+  junit_version='5.8.0-M1'
+  assertj_core_version='3.19.0'
   commons_io_version='2.7'
   commons_lang_version='3.11'
   javafaker_version='1.0.2'
@@ -50,11 +49,10 @@ dependencies {
   // This dependency is exported to consumers, that is to say found on their compile classpath.
   compile "org.assertj:assertj-core:${assertj_core_version}"
   compile "com.github.javafaker:javafaker:${javafaker_version}"
-  compile(platform("org.junit:junit-bom:${junit_version}"))
-  testRuntime("org.junit.platform:junit-platform-runner:${junit_platform_runner_version}")
-  compile('org.junit.jupiter:junit-jupiter')
+  compile "org.junit.jupiter:junit-jupiter-api:${junit_version}"
+  compile "org.junit.jupiter:junit-jupiter-engine:${junit_version}"
   
-  compile("org.junit.jupiter:junit-jupiter-params:${junit_version}")
+  compile "org.junit.jupiter:junit-jupiter-params:${junit_version}"
   
   // https://mvnrepository.com/artifact/org.easetech/easytest-core
   compile "org.easetech:easytest-core:1.4.0"
