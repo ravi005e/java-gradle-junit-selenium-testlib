@@ -394,4 +394,12 @@ public class Component {
     wait.until(ExpectedConditions.textToBePresentInElementLocated(locator, text));
   }
   
+  public void maximize() {
+    this.driver.manage().window().maximize();
+  }
+  
+   public void fullscreen() {
+    this.driver.manage().window().fullscreen();
+  } 
+  
 }
