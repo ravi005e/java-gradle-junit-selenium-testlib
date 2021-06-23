@@ -39,7 +39,6 @@ public enum DriverType implements DriverSetup {
       HashMap<String, Object> chromePreferences = new HashMap<>();
       chromePreferences.put("profile.password_manager_enabled", false);
       chromePreferences.put("profile.default_content_settings.popups", 0);
-      chromePreferences.put("profile.managed_default_content_settings.geolocation", 2);
 
       ChromeOptions options = new ChromeOptions();
       options.setCapability("chrome.switches",
@@ -47,6 +46,7 @@ public enum DriverType implements DriverSetup {
       options.setCapability("screenResolution", "1280x1024");
       options.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
       options.addArguments("--test-type");
+      options.addArguments("--disable-geolocation");
       
       options.merge(capabilities);
       options.setHeadless(HEADLESS);
