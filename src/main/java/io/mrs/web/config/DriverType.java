@@ -39,6 +39,7 @@ public enum DriverType implements DriverSetup {
       HashMap<String, Object> chromePreferences = new HashMap<>();
       chromePreferences.put("profile.password_manager_enabled", false);
       chromePreferences.put("profile.default_content_settings.popups", 0);
+      chromePreferences.put("profile.default_content_setting_values.geolocation", 2);
 
       ChromeOptions options = new ChromeOptions();
       options.setCapability("chrome.switches",
