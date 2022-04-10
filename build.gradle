@@ -16,7 +16,7 @@ plugins {
 }
 
 
-group 'io.mrs'
+group 'io.github.mrs'
 version '1.0-SNAPSHOT'
 
 repositories {
